@@ -30,13 +30,21 @@ from GroundSeg import *
 KITTI_DIR = '../../Data/KITTI/'
 OUTPUT_DIR = '../../Data/SensorMeasurements/'
 
+if not os.path.exists(OUTPUT_DIR):
+	os.makedirs(OUTPUT_DIR)
+
 # 2D grid resolution
 res = 1./3.
 i = 0
 
 for folder_main in sorted(os.listdir(KITTI_DIR)):
 	print folder_main
+
+	if os.path.isfile(folder_main):
+		continue
+
 	for folder_second in sorted(os.listdir(os.path.join(KITTI_DIR, folder_main))):
+		print folder_second
 		if ((folder_second[-4:] == 'sync')):
 			print folder_second
 
