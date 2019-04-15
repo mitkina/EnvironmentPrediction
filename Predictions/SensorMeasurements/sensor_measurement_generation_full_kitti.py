@@ -40,11 +40,12 @@ i = 0
 for folder_main in sorted(os.listdir(KITTI_DIR)):
 	print folder_main
 
-	if os.path.isfile(folder_main):
+	if os.path.isfile(os.path.join(KITTI_DIR, folder_main)):
 		continue
 
 	for folder_second in sorted(os.listdir(os.path.join(KITTI_DIR, folder_main))):
 		print folder_second
+
 		if ((folder_second[-4:] == 'sync')):
 			print folder_second
 
