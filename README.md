@@ -10,8 +10,13 @@ Run the 'run_all.sh' script from the main directory, which contains all the nece
 The code is written in Python 2.7 with the following pip dependencies:
 
 hickle==2.1.0
+
 Keras==2.0.6
+
 numpy==1.13.3
+
 tensorboard==1.6.0
+
 tensorflow-gpu==1.6.0
+
 tensorflow-tensorboard==0.4.0rc3
