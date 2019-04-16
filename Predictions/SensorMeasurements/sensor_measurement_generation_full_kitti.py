@@ -73,7 +73,6 @@ for folder_main in sorted(os.listdir(KITTI_DIR)):
 			
 			# OXTS pre-processing is from pykitti: https://github.com/utiasSTARS/pykitti/
 			for fn_oxts in sorted(os.listdir(OXTS_DIR)):
-				# print fn_oxts
 
 				sequence = folder_second + '_' + fn_oxts[0:10]
 
