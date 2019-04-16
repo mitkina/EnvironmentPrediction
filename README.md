@@ -11,7 +11,7 @@ Run the following scripts from the top directory:
 'run_grid_generation.sh'
 'run_predictions.sh'
 
-This sequence of commands runs ground segmentation, occupancy grid and DOGMa generation, PredNet training in t+1 then t+5 mode on DST and probabilistic static grid and DOGMa data, and evaluation on the test set.
+This sequence of commands runs ground segmentation, occupancy grid and DOGMa generation, PredNet training in t+1 then t+5 mode on DST and probabilistic static grid and DOGMa data, and evaluation on the test set. The input data and results are located in the 'Data/' directory.
 
 The code is written in Python 2.7 with the following pip dependencies:
 
