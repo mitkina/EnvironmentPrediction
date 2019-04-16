@@ -34,5 +34,18 @@ python kitti_train_dogma_t_1_dst.py
 # train PredNet in t+5 mode
 python kitti_train_dogma_t_5_dst.py
 
-# evaluate PredNet results
-# python kitti_evaluate_dogma.py
+# EV EVALUATE
+
+# train PredNet in t+5 mode
+python kitti_evaluate_ev_t_5.py
+
+# train PredNet in t+5 mode
+python kitti_evaluate_ev_t_5_dst.py
+
+# DOGMA EVALUATE
+
+# train PredNet in t+5 mode
+python kitti_evaluate_dogma_t_5.py
+
+# train PredNet in t+5 mode
+python kitti_evaluate_dogma_t_5_dst.py

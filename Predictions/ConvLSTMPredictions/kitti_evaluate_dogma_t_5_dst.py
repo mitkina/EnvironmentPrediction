@@ -75,17 +75,8 @@ X_test = np.expand_dims(0.5*(X_test[:,:,:,:,0]) + 0.5*(1.-X_test[:,:,:,:,1]), ax
 X_hat = np.expand_dims(0.5*(X_hat[:,:,:,:,0]) + 0.5*(1.-X_hat[:,:,:,:,1]), axis=-1)
 end = timer()
 
-# Compare MSE of PredNet predictions vs. using last frame.  Write results to prediction_scores.txt
-mse_model = np.mean( (X_test[:, 1:,:,:,0] - X_hat[:, 1:,:,:,0])**2 )  # look at all timesteps except the first
-mse_prev = np.mean( (X_test[:, :-1,:,:,0] - X_test[:, 1:,:,:,0])**2 )
-
 RESULTS_SAVE_DIR_OCC = RESULTS_SAVE_DIR + "DOGMaDST/"
 if not os.path.exists(RESULTS_SAVE_DIR_OCC): os.mkdir(RESULTS_SAVE_DIR_OCC)
-
-f = open(RESULTS_SAVE_DIR_OCC + 'results_test.txt', 'w')
-f.write("Model MSE: %f\n" % mse_model)
-f.write("Previous Frame MSE: %f" % mse_prev)
-f.close()
 
 # save history in a hickle file
 hkl.dump([X_test, X_hat], RESULTS_SAVE_DIR_OCC + 'results_test.hkl', mode='w')

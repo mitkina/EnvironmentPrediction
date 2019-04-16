@@ -5,7 +5,13 @@ The attached code demonstrates the process of LiDAR data pre-processing into occ
 
 To begin, please download the KITTI tracking dataset from: http://www.cvlibs.net/datasets/kitti/raw_data.php. Copy the resulting directories into the Data/KITTI/ subdirectory.
 
-Run the 'run_all.sh' script from the main directory, which contains all the necessary commands in sequence. This sequence of commands runs ground segmentation, occupancy grid and DOGMa generation, PredNet training in t+1 then t+5 mode on DST DOGMa data, and evaluation on the test set.
+Run the following scripts from the top directory:
+
+'run_sensor_measurements.sh'
+'run_grid_generation.sh'
+'run_predictions.sh'
+
+This sequence of commands runs ground segmentation, occupancy grid and DOGMa generation, PredNet training in t+1 then t+5 mode on DST and probabilistic static grid and DOGMa data, and evaluation on the test set.
 
 The code is written in Python 2.7 with the following pip dependencies:
 
