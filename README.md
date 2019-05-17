@@ -1,5 +1,7 @@
 # EnvironmentPrediction
-Implementation of occupancy grid predictions via ConvLSTM video frame prediction architecture.
+Implementation of occupancy grid predictions via ConvLSTM architecture as in:
+
+Itkina, Masha, Katherine Driggs-Campbell, and Mykel J. Kochenderfer. "Dynamic Environment Prediction in Urban Scenes using Recurrent Representation Learning." arXiv preprint arXiv:1904.12374 (2019).
 
 The attached code demonstrates the process of LiDAR data pre-processing into occupancy grids and DOGMas, and then portrays the training on the PredNet architecture.
 
