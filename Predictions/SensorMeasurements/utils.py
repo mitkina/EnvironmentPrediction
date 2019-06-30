@@ -118,7 +118,11 @@ def global_grid(origin,endpoint,res):
 
 def find_nearest(n,v,v0,vn,res):
     "Element in nd array `a` closest to the scalar value `a0`"
-    idx = int(np.floor( n*(v-v0+res/2.)/(vn-v0+res) ))
+    if type(v) is np.ndarray:
+        idx = np.int16(np.floor(n*(v-v0+res/2.)/(vn-v0+res)))
+    else:
+        idx = int(np.floor( n*(v-v0+res/2.)/(vn-v0+res) ))
+
     return idx
 
 # generate the y indices along a line
