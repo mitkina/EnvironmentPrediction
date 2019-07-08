@@ -52,7 +52,7 @@ val_file = os.path.join(DATA_DIR_OCC, 'X_val.hkl')
 val_sources = os.path.join(DATA_DIR_OCC, 'sources_val.hkl')
 
 # Training parameters
-nt = 2 # number of timesteps used for sequences in training
+nt = 20 # number of timesteps used for sequences in training
 nb_epoch = 100
 batch_size = 1
 samples_per_epoch =  500
